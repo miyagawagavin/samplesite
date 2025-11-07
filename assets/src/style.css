@@ -1,0 +1,276 @@
+a {
+    color: rgba(0, 0, 0, 0.7);
+    max-width: 100%;
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(240, 241, 241);
+    /* Fixed header background color */
+    padding: 10px 0;
+    z-index: 1000;
+    /* Set a high z-index to ensure the header is above other content */
+}
+
+.fixed-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgb(240, 241, 241);
+    /* Footer background color */
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 100px;
+    margin-left: 0px;
+}
+
+.custom-navbar {
+    background-color: rgb(240, 241, 241);
+    color: black;
+}
+
+.nav-link {
+    color: black;
+}
+
+.image-section {
+    position: relative;
+    /* Set the container to relative positioning */
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    /* Hide any overflow content */
+}
+
+.image-section img {
+    width: 100%;
+    /* Stretch the image to the entire width */
+    height: 700px;
+    /* Maintain aspect ratio */
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    /* Position the text vertically in the middle */
+    left: 50%;
+    /* Position the text horizontally in the middle */
+    transform: translate(-50%, -50%);
+    /* Center the text */
+    font-size: 38px;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    color: white;
+    /* Text color */
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent black background */
+    padding: 10px 20px;
+    /* Adjust padding as needed */
+    border-radius: 5px;
+}
+
+.sharada-text {
+    font-size: 100px;
+}
+
+.info-section {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+.info-text {
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    align-items: center;
+}
+
+.info-image {
+    width: 500px;
+    height: 500px;
+    border-radius: 50px;
+}
+
+.move-down {
+    margin-top: 30px;
+}
+
+.btn-custom {
+    background-color: #6aaa77;
+    /* Custom button background color */
+    color: white;
+    /* Button text color */
+    font-weight: bold;
+    /* Make the text bold */
+    letter-spacing: 2px;
+    /* Increase character spacing */
+    border: none;
+    /* Remove border */
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+    /* Custom color on hover */
+    color: white;
+    /* Text color on hover */
+}
+
+.container {
+    padding: 80px;
+    margin-bottom: 100px;
+}
+
+.container-team {
+    padding: 0;
+    margin: 5px 5px;
+}
+
+.card-title,
+.card-subtitle {
+    text-align: center;
+}
+
+#officeCarousel {
+    max-width: 900px;
+    /* Set the maximum width for the carousel */
+    margin: 0 auto;
+    /* Center the carousel horizontally */
+}
+
+.container-wrap {
+    min-height: 700px;
+    padding: 150px;
+}
+
+.strategy-img {
+    background: url("../images/strategy_whatwetrade.jpg");
+    color: white;
+}
+
+ol.carousel-indicators {
+    position: absolute;
+    bottom: 5px;
+    margin: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+}
+
+ol.carousel-indicators li,
+ol.carousel-indicators li.active {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+    border-radius: 50%;
+    border: 0;
+    /* background: transparent; */
+}
+
+ol.carousel-indicators li {
+    background: rgba(255, 255, 255, 0.39);
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
+
+ol.carousel-indicators li.active {
+    background: yellow;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    height: 100px;
+    width: 100px;
+    outline: yellow;
+    background-size: 100%, 100%;
+    border-radius: 50%;
+    border: 1px solid yellow;
+    background-image: none;
+}
+
+.carousel-control-next-icon:after {
+    content: '>>';
+    font-size: 55px;
+    color: yellow;
+    font-weight: bold;
+}
+
+.carousel-control-prev-icon:after {
+    content: '<<';
+    font-size: 55px;
+    color: yellow;
+    font-weight: bold;
+}
+
+.openings {
+    margin-top: 100px;
+}
+
+.accordion-button {
+    width: 800px;
+
+    /* Adjust the width as needed */
+}
+
+.accordion-content {
+    width: 800px;
+    /* Adjust the width as needed */
+    /* text-align: center; */
+}
+
+.accordion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.centered-accordion {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 100px;
+}
+.card {
+    margin-left: auto;
+    margin-right: auto;
+}
+@media only screen and (min-width: 992px) {
+    .navbar .navbar-nav .nav-item .nav-link {
+        padding: 0 0.5em;
+    }
+
+    .navbar .navbar-nav .nav-item:not(:last-child) .nav-link {
+        border-right: 0.5px solid #bebcbc;
+    }
+    .navbar-toggler {
+        color:rgba(0, 0, 0, 0.7)
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .container {
+        padding: 5px;
+        margin: auto;
+    }
+    .info-section {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+}
