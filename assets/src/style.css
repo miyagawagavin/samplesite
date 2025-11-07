@@ -281,6 +281,9 @@ ol.carousel-indicators li.active {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    img {
+        margin: auto;
+    }
 }
 @media only screen and (max-width: 700px) {
     .card {
@@ -288,3 +291,4 @@ ol.carousel-indicators li.active {
     }
     
 }
+
