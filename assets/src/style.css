@@ -282,8 +282,14 @@ ol.carousel-indicators li.active {
         max-width: 100%;
     }
     img {
-        margin: auto;
+        margin: 0 auto;
     }
+    #officeCarousel {
+    max-width: 100%;
+    /* Set the maximum width for the carousel */
+    margin: 0 auto;
+    /* Center the carousel horizontally */
+}
 }
 @media only screen and (max-width: 700px) {
     .card {
@@ -291,4 +297,5 @@ ol.carousel-indicators li.active {
     }
     
 }
+
 
