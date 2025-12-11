@@ -251,6 +251,51 @@ ol.carousel-indicators li.active {
     margin-left: auto;
     margin-right: auto;
 }
+.info-image {
+            width: 100%;
+            height: auto;
+            display: block;
+    }
+
+    /* Ensure consistent spacing on mobile */
+    @media only screen and (max-width: 767px) {
+        .info-section {
+            padding: 20px 15px;
+        }
+        
+        .info-text {
+            margin-top: 20px;
+        }
+        
+        .move-down {
+            margin-top: 0;
+        }
+    }
+
+    /* Additional responsive fixes */
+    @media only screen and (max-width: 991px) {
+        .info-image {
+            max-width: 100%;
+        }
+    }
+/* Show hamburger menu only for screens < 900px */
+@media only screen and (max-width: 899px) {
+    .navbar-toggler {
+        display: block;
+    }
+    
+    /* Ensure proper mobile navigation styling */
+    .navbar-nav {
+        text-align: center;
+        padding: 15px 0;
+    }
+    
+    .navbar-nav .nav-item {
+        margin: 10px 0;
+    }
+}
+
+/* Keep existing media queries */
 @media only screen and (min-width: 992px) {
     .navbar .navbar-nav .nav-item .nav-link {
         padding: 0 0.5em;
@@ -262,8 +307,8 @@ ol.carousel-indicators li.active {
     .navbar-toggler {
         color:rgba(0, 0, 0, 0.7)
     }
+    
 }
-
 @media only screen and (max-width: 1200px) {
     .container {
         padding: 5px;
