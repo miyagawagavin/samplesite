@@ -1,3 +1,8 @@
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
 a {
     color: rgba(0, 0, 0, 0.7);
     max-width: 100%;
@@ -101,10 +106,16 @@ a {
 }
 
 .info-image {
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
     border-radius: 50px;
 }
+
+
+
+
+
 
 .move-down {
     margin-top: 30px;
@@ -131,8 +142,13 @@ a {
 }
 
 .container {
-    padding: 80px;
+    padding: 40px 20px;
     margin-bottom: 100px;
+    max-width: 100%;
+}
+
+
+
 }
 
 .container-team {
@@ -221,16 +237,28 @@ ol.carousel-indicators li.active {
 }
 
 .accordion-button {
-    width: 800px;
-
-    /* Adjust the width as needed */
+    width: 100%;
+    max-width: 800px;
+    white-space: normal;
+    word-wrap: break-word;
 }
 
 .accordion-content {
-    width: 800px;
-    /* Adjust the width as needed */
-    /* text-align: center; */
+    width: 100%;
+    max-width: 800px;
+    word-wrap: break-word;
 }
+
+
+
+
+
+
+
+
+
+
+
 
 .accordion {
     display: flex;
@@ -259,6 +287,24 @@ ol.carousel-indicators li.active {
 
     /* Ensure consistent spacing on mobile */
     @media only screen and (max-width: 767px) {
+        
+        .container {
+            padding: 20px 15px;
+        }
+        
+        .image-section img {
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .sharada-text {
+            font-size: 50px;
+        }
+        
+        .overlay-text {
+            font-size: 24px;
+            padding: 8px 15px;
+        }
         .info-section {
             padding: 20px 15px;
         }
@@ -272,12 +318,51 @@ ol.carousel-indicators li.active {
         }
     }
 
+/* Medium screens */
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+    .container {
+        padding: 30px 20px;
+    }
+    
+    .image-section img {
+        height: 500px;
+        object-fit: cover;
+    }
+    
+    .sharada-text {
+        font-size: 70px;
+    }
+    
+    .overlay-text {
+        font-size: 30px;
+    }
+}
+
     /* Additional responsive fixes */
     @media only screen and (max-width: 991px) {
         .info-image {
             max-width: 100%;
         }
     }
+
+/* Hamburger menu icon styling */
+.navbar-toggler {
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    background-color: transparent;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
 /* Show hamburger menu only for screens < 900px */
 @media only screen and (max-width: 899px) {
     .navbar-toggler {
@@ -351,3 +436,181 @@ ol.carousel-indicators li.active {
 
 
 
+
+/* Prevent horizontal overflow on all screen sizes */
+.container, .container-fluid {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+.col-md-6, .col-md-12, .col-md-4 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image-section img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Text wrapping and mobile fixes */
+* {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Fix accordion on mobile */
+@media only screen and (max-width: 900px) {
+    .accordion-button {
+        width: 100%;
+        max-width: 100%;
+        white-space: normal;
+        text-align: left;
+        padding: 10px 15px;
+        word-wrap: break-word;
+    }
+    
+    .accordion-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
+        word-wrap: break-word;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+    
+    .centered-accordion {
+        padding: 80px 10px 100px 10px;
+        width: 100%;
+    }
+    
+    /* Fix carousel controls on mobile */
+    .carousel-control-prev-icon:after,
+    .carousel-control-next-icon:after {
+        font-size: 30px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        height: 50px;
+        width: 50px;
+    }
+    
+    /* Fix container-wrap for carousel */
+    .container-wrap {
+        padding: 0;
+        min-height: auto;
+        width: 100%;
+    }
+    
+    #officeCarousel {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .carousel-item img {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        object-fit: cover;
+    }
+}
+
+/* Fix footer text wrapping on mobile */
+@media only screen and (max-width: 767px) {
+    .fixed-footer {
+        height: auto;
+        min-height: 80px;
+        padding: 10px 0;
+    }
+    
+    .fixed-footer .container-fluid {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    .fixed-footer .container-fluid > div {
+        margin: 5px 0;
+        font-size: 12px;
+        word-wrap: break-word;
+        max-width: 100%;
+    }
+}
+
+/* Ensure all text content wraps properly */
+p, li, a, span, div, h1, h2, h3, h4, h5, h6 {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Fix strategy cards on mobile */
+@media only screen and (max-width: 767px) {
+    .strategy-img {
+        width: 100% !important;
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Additional card responsiveness for about page */
+@media only screen and (max-width: 767px) {
+    .card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+        margin: 10px auto;
+    }
+    
+    .card-body {
+        padding: 15px;
+        word-wrap: break-word;
+    }
+}
+
+/* Fix info-text on all screen sizes */
+.info-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Ensure proper spacing on mobile for all pages */
+@media only screen and (max-width: 767px) {
+    body {
+        font-size: 16px;
+    }
+    
+    .info-text {
+        font-size: 16px;
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+}
