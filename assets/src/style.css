@@ -805,3 +805,33 @@ body {
         overflow: hidden;
     }
 }
+
+/* Fix header overlap on all screen sizes */
+.info-section:first-of-type,
+.container.info-section:first-of-type {
+    padding-top: 130px !important; /* 100px header + 30px spacing */
+    margin-top: 0;
+}
+
+/* Ensure adequate spacing for fixed header on desktop */
+@media only screen and (min-width: 1201px) {
+    .info-section {
+        padding-top: 130px;
+    }
+    
+    .container.info-section {
+        padding-top: 130px;
+    }
+    
+    .container-wrap {
+        padding-top: 100px;
+    }
+}
+
+/* Adjust for wide screens */
+@media only screen and (min-width: 1400px) {
+    .info-section:first-of-type,
+    .container.info-section:first-of-type {
+        padding-top: 150px !important;
+    }
+}
