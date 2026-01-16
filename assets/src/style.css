@@ -614,3 +614,194 @@ p, li, a, span, div, h1, h2, h3, h4, h5, h6 {
         font-size: 20px;
     }
 }
+
+/* Fix body padding for fixed footer */
+body {
+    padding-bottom: 120px; /* Account for fixed footer */
+}
+
+/* Override Bootstrap's navbar-expand-md to work at our 900px breakpoint */
+@media (max-width: 899px) {
+    .navbar-expand-md > .container,
+    .navbar-expand-md > .container-fluid {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .navbar-expand-md .navbar-nav {
+        flex-direction: column;
+    }
+    
+    .navbar-expand-md .navbar-nav .nav-link {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    
+    .navbar-expand-md > .container,
+    .navbar-expand-md > .container-fluid {
+        flex-wrap: wrap;
+    }
+    
+    .navbar-expand-md .navbar-collapse {
+        display: block !important;
+        flex-basis: 100%;
+        flex-grow: 1;
+        align-items: center;
+    }
+    
+    .navbar-expand-md .navbar-toggler {
+        display: block;
+    }
+}
+
+@media (min-width: 900px) {
+    .navbar-expand-md {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+    }
+    
+    .navbar-expand-md .navbar-nav {
+        flex-direction: row;
+    }
+    
+    .navbar-expand-md .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+    }
+    
+    .navbar-expand-md .navbar-toggler {
+        display: none;
+    }
+}
+
+/* Ensure collapsed menu is hidden by default */
+.navbar-collapse.collapse:not(.show) {
+    display: none;
+}
+
+/* When the menu is shown (has .show class), display it */
+.navbar-collapse.collapse.show {
+    display: block;
+}
+
+/* Make sure the collapsed menu appears below the navbar on mobile */
+@media (max-width: 899px) {
+    .navbar-collapse {
+        width: 100%;
+        background-color: rgb(240, 241, 241);
+        padding: 10px 0;
+    }
+}
+
+/* Increase bottom padding on mobile for taller footer */
+@media only screen and (max-width: 767px) {
+    body {
+        padding-bottom: 180px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    body {
+        padding-bottom: 140px;
+    }
+}
+
+/* Lock hero overlay text size - prevent accessibility text scaling from affecting it */
+.overlay-text {
+    /* Prevent text size adjustments from accessibility settings */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    
+    /* Force fixed font sizes */
+    font-size: 38px !important;
+    
+    /* Prevent wrapping */
+    white-space: nowrap;
+    
+    /* Override any zoom/scale settings */
+    zoom: 1;
+}
+
+.sharada-text {
+    /* Prevent text size adjustments from accessibility settings */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    text-size-adjust: none;
+    
+    /* Force fixed font size */
+    font-size: 100px !important;
+    
+    /* Prevent wrapping */
+    white-space: nowrap;
+}
+
+/* Override for mobile - still keep it fixed but smaller */
+@media only screen and (max-width: 767px) {
+    .overlay-text {
+        font-size: 24px !important;
+        white-space: normal;
+        max-width: 90vw;
+    }
+    
+    .sharada-text {
+        font-size: 50px !important;
+        white-space: normal;
+    }
+}
+
+/* Medium screens */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .overlay-text {
+        font-size: 30px !important;
+        white-space: nowrap;
+    }
+    
+    .sharada-text {
+        font-size: 70px !important;
+        white-space: nowrap;
+    }
+}
+
+/* Improved hamburger menu behavior */
+.navbar-collapse {
+    transition: height 0.35s ease, opacity 0.35s ease;
+}
+
+/* Ensure proper collapse behavior */
+.navbar-collapse.collapsing {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.35s ease;
+}
+
+.navbar-collapse.show {
+    height: auto !important;
+}
+
+/* Smooth animation for mobile menu */
+@media (max-width: 899px) {
+    .navbar-collapse {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease-in-out;
+    }
+    
+    .navbar-collapse.show {
+        max-height: 500px;
+        transition: max-height 0.35s ease-in-out;
+    }
+    
+    .navbar-collapse.collapsing {
+        max-height: 0;
+    }
+}
+
+/* Prevent body scroll when menu is open on mobile */
+@media (max-width: 899px) {
+    body.menu-open {
+        overflow: hidden;
+    }
+}

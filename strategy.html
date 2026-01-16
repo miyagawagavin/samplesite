@@ -24,7 +24,7 @@
                 <a class="navbar-brand ml-3" href="./index.html">
                     <img src="./assets/images/sharada_logo.png" alt="Company Logo" class="logo">
                 </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -102,7 +102,7 @@
                     &copy; 2011-<span id="year"></span> Sharada Capital Management. All rights reserved
                 </div>
                 <div>
-                    <a href="/cdn-cgi/l/email-protection#7a101518093a09121b081b1e1b191754191517"><i class="fas fa-envelope"></i> Contact Us</a>
+                    <a href="/cdn-cgi/l/email-protection#9bf1f4f9e8dbe8f3fae9fafffaf8f6b5f8f4f6"><i class="fas fa-envelope"></i> Contact Us</a>
                 </div>
 
             </div>
@@ -110,4 +110,11 @@
     </div>
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bo
+otstrap.min.js"></script>
+    <script>
+    document.getElementById("year").innerHTML = new Date().getFullYear();
+</script>
+    <script src="./hamburger-fix.js"></script>
+</body>
+
+</html>
